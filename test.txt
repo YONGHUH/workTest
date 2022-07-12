@@ -1,3 +1,217 @@
 git token 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
 
 https://docs.google.com/spreadsheets/d/1IpPrwir_lmk6nbM0wdPoRP3Bv9ohEc8oYVQ0smli3kQ/edit#gid=1585634208
+
+
+https://github.com/AMF-skcc/AMF2022
+https://workflowy.com/s/ddd/9pFlIV5XAfuWu3qC
+https://onepos.atlassian.net/jira/software/projects/TST/boards/1
+https://drive.google.com/drive/folders/1tF_9nOjxvpjgW2tkKTmuWticQbCscv9C
+https://github.com/msa-school/capstone-project-base
+https://docs.google.com/spreadsheets/d/1EhuTSwKK1fDfjWs7PtxQyt9zUHPWBamV2wYoAYY_Qtc/edit#gid=497890590
+https://app.netlify.com/teams/yonghuh/overview
+https://www.figma.com/files/team/1120999512452314841/TCL2?fuid=1121000723237997625
+https://miro.com/app/dashboard/
+
+
+지라 주소 : https://onepos.atlassian.net/jira/software/projects/TST/boards/1
+ID : HUHYONG
+PW : 허하윤~11
+
+
+https://onepos.atlassian.net/wiki/spaces/TST/overview?homepageId=229378
+
+
+cmd(포트확인) : netstat -lntp | grep :808 
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      3752/java           
+tcp        0      0 0.0.0.0:8081            0.0.0.0:*               LISTEN      3109/java           
+cmd : kill -9 3109  <-- 해당 pid
+모든 점유 프로세스 삭제 : kill -9 `netstat -lntp|grep 808|awk '{ print $7 }'|grep -o '[0-9]*'`
+
+ddd-petstore-level6-layered-spring-jpa
+
+
+https://gitpod.io/#https://github.com/msa-school/ddd-petstore-level5-layered
+https://gitpod.io/#https://github.com/msa-school/ddd-petstore-level6-layered-spring-jpa
+
+#################
+내 작업
+https://gitpod.io/#https://github.com/YONGHUH/ddd-petstore-level6-layered-spring-jpa
+https://gitpod.io/#https://github.com/YONGHUH/lv9
+강사커밋 
+https://github.com/jinyoung/dog-walker
+#################
+
+
+
+sudo apt-get update
+sudo apt-get install net-tools
+sudo apt install iputils-ping
+pip install httpie
+
+mvn spring-boot:run
+
+
+git push origin main
+
+
+
+***********************  작업 커맨드 ****************************
+
+mvn spring-boot:run
+
+http :8080
+/*DB접속*/
+http://localhost:8080/h2-console
+jdbc:h2:mem:testdb
+jdbc:h2:~/Desktop/클라우드Lv3/0616_3/ddd-petstore-level6-layered-spring-jpa-main/src/test
+
+
+http localhost:8080/stores storeName="1호점" passWd="1234" tableCnt=5
+{"storeName": "1호점" , "passWd":"1234" , "tableCnt":5}
+http :8080/stores storeName="2호점" passWd="1234" tableCnt=10
+http localhost:8080/stores
+
+
+http :8080/foodprods storeId="1" prodNm="신라면" qty=5
+http :8080/foodprods storeId="1" prodNm="짜파게티" qty=10
+http :8080/foodprods
+http PATCH "http://localhost:8080/foodprods/1" qty=4
+
+http :8080/mastermenus storeId="1" menuNm="라면" amt="5000" prodNm="신라면"
+http :8080/mastermenus storeId="1" menuNm="짜장면" amt="5000" prodNm="짜파게티"
+http :8080/mastermenus storeId="1" menuNm="김밥" amt="3000" prodNm="삼각김밥"
+http mastermenus
+
+http :8080/sales orderNumber="111" storeId="1" storeName="1호점" saleDtm="202206161605"
+http :8080/sales orderNumber="222" storeId="1" storeName="1호점" saleDtm="202206161614"
+http :8080/sales
+
+
+
+/******o.v 호출****/
+
+http :8080/sales orderNumber="111" storeId="1" storeName="1호점" saleDtm="202206161605" oneMenu[id]="1" oneMenu[menuNm]="라면" oneMenu[price]="5000" 
+
+
+{ "orderNumber":"111" 
+ ,"storeId":"1" 
+ ,"storeName":"1호점" 
+ ,"saleDtm":"202206161605" 
+ ,"oneMenu" : { {"id" : "1", "menuNm" : "라면", "price":"5000" }}
+}
+
+
+{ "orderNumber":"111" 
+ ,"storeId":"1" 
+ ,"storeName":"1호점" 
+ ,"saleDtm":"202206161605" 
+ ,"menuIds" : 
+      [
+          { 
+            "id" : "10"
+          , "menuNm" : "라면1"
+          , "price":"5000" 
+          },
+          { 
+            "id" : "11"
+          , "menuNm" : "라면2"
+          , "price":"5000" 
+          }
+      ]
+     
+}
+
+
+/**********react**************/
+
+
+https://github.com/kenu/okreact
+
+
+ https://okdevtv.com/mib/nodejs
+"node -v
+nvm list 
+nvm install v16.15.1
+git -version
+git --version
+cat ~/.gitconfig
+pwd
+mkdir ~/workspace-react
+cd ~/workspace-react
+mkdir chat
+cd chat
+pwd
+code .
+npm i
+node server.js
+ls -al
+node server
+pwd
+cd ..
+rm -rf chat
+pwd
+take chat
+pwd
+code .
+npm i
+node server.js
+code .
+node server.js
+cd ..
+npm create vite@latest people -- --template react
+cd myapp
+npm i
+npm run dev
+code .
+npm run dev
+cd ~/workspace-react
+git clone https://github.com/kenu/okreact
+ls 
+ls -al
+code okreact
+pwd
+npm install
+pwd
+
+
+npm i
+npm run dev
+
+
+--------------------------
+
+
+function Contact() {
+  const list = [1, 2, 3];
+  return (
+    <div>
+      <h1>Contact</h1>
+      <ul>
+        {list.map((item, index) => (
+          <li key={index}>
+            <a href="""">
+              {item}: {index}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Contact;
+
+				
+git clone https://github.com/egovframework/egovframe-template-simple-react	simple-react			
+git clone https://github.com/egovframework/egovframe-template-simple-backend simple-backend				
+				
+
+/**********프로젝트만들기 ***********/
+  163  npm create vite@latest people -- --template react
+  164  cd people/
+  165  npm i
+  166  npm i axios react-router-dom
+restfrontend 참고함. 
+  env 설정함
+  
